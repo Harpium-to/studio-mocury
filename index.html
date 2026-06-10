@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Mônica Cury | Treino com método, ciência e acompanhamento de verdade em Palmas-TO</title>
+<meta name="description" content="Studio de treinamento personalizado em Palmas-TO. Neurociência + fitness, treinos sob medida e acompanhamento de perto. Agende sua avaliação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1372597528098137');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1372597528098137&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+/* ============ RESET + TOKENS ============ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --void:#000000;
+  --onyx:#0a0a0a;
+  --card:#101010;
+  --acid:#CCFF00;
+  --acid-dim:rgba(204,255,0,.12);
+  --chrome-a:#ffffff;
+  --chrome-b:#888888;
+  --text:#f2f2f2;
+  --text-2:#a8a8a8;
+  --text-3:#666666;
+  --border:#222222;
+  --ease:cubic-bezier(0.19,1,0.22,1);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--void);
+  color:var(--text);
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:'Syne',sans-serif;text-transform:uppercase;letter-spacing:-.03em;line-height:1.02}
+::selection{background:var(--acid);color:#000}
+
+/* noise overlay */
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{position:relative;padding:72px 0}
+@media(min-width:768px){section{padding:110px 0}}
+
+/* ============ MARQUEE ============ */
+.marquee{
+  background:var(--acid);color:#000;overflow:hidden;white-space:nowrap;
+  font-family:'Syne',sans-serif;font-weight:800;font-size:.8rem;text-transform:uppercase;
+  letter-spacing:.12em;padding:9px 0;position:relative;z-index:5;
+}
+.marquee-inner{display:inline-block;animation:marq 22s linear infinite}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============ CTA BUTTON (chrome/acid) ============ */
+.cta-btn{
+  display:inline-block;width:100%;max-width:480px;
+  padding:19px 30px;cursor:pointer;border:none;text-decoration:none;text-align:center;
+  font-family:'Syne',sans-serif;font-weight:800;text-transform:uppercase;
+  font-size:clamp(.95rem,3.4vw,1.1rem);letter-spacing:.04em;
+  background:var(--acid);color:#000;
+  border-radius:14px 60px 14px 60px;
+  box-shadow:0 0 34px rgba(204,255,0,.38);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-radius .4s var(--ease);
+}
+.cta-btn:hover{transform:translateY(-3px) rotate(-1deg);box-shadow:0 0 55px rgba(204,255,0,.6);border-radius:60px 14px 60px 14px}
+.cta-btn:active{transform:translateY(0)}
+.micro{display:block;margin-top:12px;font-size:.82rem;color:var(--text-3);letter-spacing:.02em}
+.micro b{color:var(--acid);font-weight:500}
+
+/* ============ HERO ============ */
+.hero{min-height:92svh;display:flex;align-items:flex-end;padding:0 0 56px;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(1.05) contrast(1.05)}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 35%,rgba(0,0,0,.92) 78%,#000 100%)}
+.hero-glow{position:absolute;z-index:-1;width:60vw;height:60vw;max-width:640px;max-height:640px;border-radius:50%;
+  background:radial-gradient(circle,rgba(204,255,0,.22),transparent 65%);
+  right:-18vw;top:8%;animation:drift 20s ease-in-out infinite alternate;pointer-events:none}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-50px,60px) scale(1.15)}}
+.hero-top{position:absolute;top:0;left:0;right:0;padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-family:'Syne',sans-serif;font-weight:800;text-transform:uppercase;font-size:.95rem;letter-spacing:.06em}
+.brand i{color:var(--acid);font-style:normal}
+.hero-tag{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--acid);border:1px solid rgba(204,255,0,.4);padding:6px 14px;border-radius:99px;backdrop-filter:blur(8px);background:rgba(0,0,0,.35)}
+.eyebrow{display:inline-block;font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--acid);margin-bottom:18px}
+.hero h1{
+  font-size:clamp(2.5rem,8.4vw,5.4rem);font-weight:800;max-width:13ch;
+  text-shadow:1.5px 0 0 rgba(255,0,255,.35),-1.5px 0 0 rgba(0,240,255,.35);
+}
+.hero h1 em{font-style:italic;color:var(--acid);text-shadow:none}
+.hero-sub{margin:22px 0 30px;max-width:560px;color:var(--text-2);font-size:clamp(1rem,3vw,1.15rem)}
+.hero-sub b{color:var(--text);font-weight:500}
+.hero-proof{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.chip{font-size:.78rem;letter-spacing:.04em;color:var(--text-2);border:1px solid var(--border);background:rgba(10,10,10,.6);backdrop-filter:blur(6px);padding:8px 14px;border-radius:99px}
+.chip i{color:var(--acid);font-style:normal;margin-right:6px}
+
+/* ============ GIANT OUTLINE TEXT ============ */
+.ghost{
+  position:absolute;font-family:'Syne',sans-serif;font-weight:800;text-transform:uppercase;
+  font-size:clamp(5rem,18vw,13rem);line-height:1;color:transparent;
+  -webkit-text-stroke:1px rgba(204,255,0,.18);pointer-events:none;user-select:none;white-space:nowrap;z-index:0;
+}
+
+/* ============ SECTION HEADERS ============ */
+.sec-label{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--acid);display:block;margin-bottom:14px}
+.sec-title{font-size:clamp(1.9rem,6vw,3.4rem);font-weight:800;max-width:18ch;margin-bottom:18px}
+.sec-title em{font-style:italic;color:var(--acid)}
+.sec-sub{color:var(--text-2);max-width:560px}
+
+/* ============ DOR ============ */
+.dor{background:var(--onyx)}
+.dor-grid{display:grid;gap:36px;margin-top:44px}
+@media(min-width:900px){.dor-grid{grid-template-columns:1.1fr .9fr;align-items:center}}
+.dor-list{display:flex;flex-direction:column;gap:14px}
+.dor-item{
+  display:flex;gap:14px;align-items:flex-start;background:var(--card);
+  border:1px solid var(--border);padding:18px 20px;
+  border-radius:18px 40px 18px 40px;transition:border-color .3s,transform .3s var(--ease);
+}
+.dor-item:hover{border-color:rgba(204,255,0,.45);transform:translateX(6px)}
+.dor-item .x{flex:0 0 auto;width:26px;height:26px;margin-top:2px}
+.dor-item p{color:var(--text-2);font-size:.97rem}
+.dor-item p b{color:var(--text);font-weight:500}
+.dor-photo{position:relative}
+.dor-photo img{border-radius:30px 90px 30px 90px;border:1px solid var(--border)}
+.dor-photo::after{content:'';position:absolute;inset:0;border-radius:30px 90px 30px 90px;box-shadow:inset 0 -120px 80px -60px rgba(0,0,0,.8)}
+.dor-turn{
+  margin-top:40px;padding:28px;text-align:center;
+  background:linear-gradient(120deg,rgba(204,255,0,.1),transparent 60%);
+  border:1px solid rgba(204,255,0,.35);border-radius:24px 70px 24px 70px;
+}
+.dor-turn p{font-family:'Syne',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(1.1rem,3.6vw,1.5rem);line-height:1.25}
+.dor-turn em{color:var(--acid);font-style:italic}
+
+/* ============ METODOLOGIA ============ */
+.met-steps{display:grid;gap:18px;margin:48px 0 14px;counter-reset:step}
+@media(min-width:768px){.met-steps{grid-template-columns:repeat(3,1fr)}}
+.step{
+  position:relative;background:var(--card);border:1px solid var(--border);
+  padding:60px 24px 26px;border-radius:20px 50px 20px 50px;overflow:hidden;
+  transition:border-color .3s;
+}
+.step:hover{border-color:rgba(204,255,0,.5)}
+.step::before{
+  counter-increment:step;content:'0' counter(step);
+  position:absolute;top:-12px;left:14px;font-family:'Syne',sans-serif;font-weight:800;
+  font-size:4.4rem;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--acid);opacity:.9;
+}
+.step h3{font-size:1.05rem;margin-bottom:10px}
+.step p{color:var(--text-2);font-size:.93rem}
+.met-benefits{display:grid;gap:14px;margin-top:46px}
+@media(min-width:768px){.met-benefits{grid-template-columns:repeat(2,1fr)}}
+.ben{
+  display:flex;gap:14px;align-items:flex-start;padding:20px 22px;background:rgba(204,255,0,.04);
+  border:1px solid var(--border);border-radius:16px 44px 16px 44px;
+}
+.ben svg{flex:0 0 auto;margin-top:3px}
+.ben h4{font-family:'Syne',sans-serif;text-transform:uppercase;font-size:.92rem;letter-spacing:.02em;margin-bottom:4px}
+.ben p{color:var(--text-2);font-size:.9rem}
+.photo-marquee{overflow:hidden;margin-top:46px;position:relative}
+.photo-marquee::before,.photo-marquee::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
+.photo-marquee::before{left:0;background:linear-gradient(90deg,var(--void),transparent)}
+.photo-marquee::after{right:0;background:linear-gradient(-90deg,var(--void),transparent)}
+.photo-track{display:flex;gap:14px;width:max-content;animation:photoScroll 80s linear infinite}
+.photo-marquee:hover .photo-track{animation-play-state:paused}
+.photo-track img{height:240px;width:auto;border-radius:20px 48px 20px 48px;border:1px solid var(--border);object-fit:cover}
+@media(min-width:768px){.photo-track img{height:320px}}
+@keyframes photoScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.center{text-align:center;margin-top:48px}
+
+/* ============ PROVA ============ */
+.prova{background:var(--onyx)}
+.prova-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:44px 0}
+.num{text-align:center;padding:22px 8px;border:1px solid var(--border);border-radius:18px;background:var(--card)}
+.num b{display:block;font-family:'Syne',sans-serif;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:800;color:var(--acid)}
+.num span{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3)}
+.depo-grid{display:grid;gap:16px}
+@media(min-width:900px){.depo-grid{grid-template-columns:repeat(3,1fr)}}
+.depo{
+  background:var(--card);border:1px solid var(--border);padding:26px 24px;position:relative;
+  border-radius:18px 50px 18px 50px;
+}
+.depo::before{content:'“';position:absolute;top:-8px;left:18px;font-size:4rem;color:var(--acid);font-family:Georgia,serif;line-height:1}
+.depo p{color:var(--text-2);font-size:.94rem;margin:14px 0 18px}
+.depo p b{color:var(--text);font-weight:500}
+.depo-who{display:flex;align-items:center;gap:12px}
+.avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--acid),#5a7000);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;color:#000;font-size:.9rem}
+.depo-who span{font-size:.85rem;color:var(--text)}
+.depo-who small{display:block;color:var(--text-3);font-size:.74rem}
+.stars{color:var(--acid);letter-spacing:2px;font-size:.8rem}
+
+/* ============ FINAL ============ */
+.final{overflow:hidden}
+.final-card{
+  position:relative;text-align:center;padding:64px 24px;
+  background:linear-gradient(160deg,rgba(204,255,0,.13),rgba(0,0,0,0) 55%),var(--card);
+  border:1px solid rgba(204,255,0,.4);border-radius:34px 110px 34px 110px;
+}
+.final h2{font-size:clamp(2rem,7vw,3.8rem);font-weight:800;max-width:16ch;margin:0 auto 18px;
+  text-shadow:1.5px 0 0 rgba(255,0,255,.3),-1.5px 0 0 rgba(0,240,255,.3)}
+.final h2 em{color:var(--acid);font-style:italic;text-shadow:none}
+.final p{color:var(--text-2);max-width:520px;margin:0 auto 34px}
+footer{padding:34px 20px 110px;text-align:center;border-top:1px solid var(--border)}
+footer p{font-size:.78rem;color:var(--text-3)}
+footer b{color:var(--text-2);font-weight:500}
+
+/* ============ STICKY CTA MOBILE ============ */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:8000;padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:rgba(0,0,0,.85);backdrop-filter:blur(12px);border-top:1px solid rgba(204,255,0,.35);
+  transform:translateY(110%);transition:transform .45s var(--ease);
+}
+.sticky-cta .cta-btn{max-width:100%;padding:15px 20px;font-size:.92rem;border-radius:12px 40px 12px 40px;box-shadow:0 0 22px rgba(204,255,0,.3)}
+.sticky-cta.show{transform:translateY(0)}
+@media(min-width:900px){.sticky-cta{display:none}}
+
+/* ============ POPUP ============ */
+.overlay{
+  position:fixed;inset:0;z-index:9500;background:rgba(0,0,0,.82);backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  opacity:0;pointer-events:none;transition:opacity .35s var(--ease);
+}
+.overlay.open{opacity:1;pointer-events:auto}
+.modal{
+  position:relative;width:100%;max-width:430px;background:var(--onyx);
+  border:1px solid rgba(204,255,0,.45);border-radius:26px 80px 26px 80px;
+  padding:42px 30px 34px;transform:translateY(26px) scale(.96);transition:transform .4s var(--ease);
+  box-shadow:0 0 70px rgba(204,255,0,.18);
+}
+.overlay.open .modal{transform:translateY(0) scale(1)}
+.modal-close{
+  position:absolute;top:14px;right:20px;background:none;border:none;color:var(--text-3);
+  font-size:1.6rem;cursor:pointer;line-height:1;padding:6px;
+}
+.modal-close:hover{color:var(--acid)}
+.modal h3{font-size:1.35rem;margin-bottom:8px}
+.modal h3 em{color:var(--acid);font-style:italic}
+.modal>p{color:var(--text-2);font-size:.9rem;margin-bottom:24px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--text-3);margin-bottom:7px}
+.field input{
+  width:100%;padding:15px 18px;background:#000;border:1px solid var(--border);
+  border-radius:12px 28px 12px 28px;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:1rem;
+  transition:border-color .25s;
+}
+.field input:focus{outline:none;border-color:var(--acid)}
+.field input.err{border-color:#ff4d6d}
+.field small{display:none;color:#ff4d6d;font-size:.74rem;margin-top:5px}
+.field.show-err small{display:block}
+.modal .cta-btn{max-width:100%;margin-top:6px}
+.modal .micro{text-align:center}
+
+/* whatsapp svg pulse */
+.wa-ico{display:inline-block;vertical-align:-3px;margin-right:8px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{animation:fadeUp .7s var(--ease) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}
+</style>
+</head>
+<body>
+
+<!-- MARQUEE TOPO -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-inner">
+    &nbsp;SEM FÓRMULAS PRONTAS ✦ SEM PROMESSAS MILAGROSAS ✦ TREINO COM MÉTODO, CONSTÂNCIA E PROPÓSITO ✦ STUDIO MÔNICA CURY • PALMAS-TO ✦&nbsp;SEM FÓRMULAS PRONTAS ✦ SEM PROMESSAS MILAGROSAS ✦ TREINO COM MÉTODO, CONSTÂNCIA E PROPÓSITO ✦ STUDIO MÔNICA CURY • PALMAS-TO ✦
+  </div>
+</div>
+
+<!-- ============ 1. HERO ============ -->
+<header class="hero">
+  <div class="hero-bg"><img src="img/0JV_2035.webp" alt="Mônica Cury e equipe de treinadores no Studio em Palmas" fetchpriority="high"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-top">
+    <div class="brand">MÔNICA<i>/</i>CURY</div>
+    <div class="hero-tag">Palmas • TO</div>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow fade-in">Studio de treinamento personalizado</span>
+    <h1 class="fade-in d1">Seu corpo muda quando o treino é feito <em>pra você.</em></h1>
+    <p class="hero-sub fade-in d2">Treinos estratégicos montados sob medida pela Mônica Cury, personal trainer que une <b>neurociência e fitness</b> pra destravar emagrecimento, hipertrofia, condicionamento ou reabilitação. Aqui você treina com acompanhamento de perto em cada repetição.</p>
+    <div class="fade-in d3">
+      <button class="cta-btn js-open">Agendar minha avaliação</button>
+      <span class="micro">Você cai direto no nosso WhatsApp • <b>Resposta rápida, sem compromisso</b></span>
+    </div>
+    <div class="hero-proof fade-in d3">
+      <span class="chip"><i>✦</i>Sem fórmulas prontas</span>
+      <span class="chip"><i>✦</i>Sem promessas milagrosas</span>
+      <span class="chip"><i>✦</i>Equipe completa de treinadores</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 2. DOR ============ -->
+<section class="dor">
+  <span class="ghost" style="top:-30px;right:-40px">CHEGA</span>
+  <div class="wrap">
+    <span class="sec-label">Isso parece familiar?</span>
+    <h2 class="sec-title">Você não falhou. Seu treino é que <em>nunca foi seu.</em></h2>
+    <div class="dor-grid">
+      <div class="dor-list">
+        <div class="dor-item">
+          <svg class="x" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="#CCFF00" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <p>Treina há meses na academia convencional e <b>o corpo continua igual</b>, e a culpa sempre parece ser sua.</p>
+        </div>
+        <div class="dor-item">
+          <svg class="x" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="#CCFF00" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <p>Recebe ficha genérica de aplicativo e treina <b>sem saber se está executando certo</b> (ou se aquilo serve pra você).</p>
+        </div>
+        <div class="dor-item">
+          <svg class="x" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="#CCFF00" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <p>Já começou e parou tantas vezes que <b>duvida da própria constância</b>.</p>
+        </div>
+        <div class="dor-item">
+          <svg class="x" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="#CCFF00" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <p>Tem medo de se machucar treinando sem orientação, <b>ou já saiu de uma lesão ou cirurgia</b> e não sabe em quem confiar pra voltar.</p>
+        </div>
+        <div class="dor-item">
+          <svg class="x" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="#CCFF00" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <p>Se sente <b>invisível em academia lotada</b>, onde ninguém olha pro seu treino nem pra sua evolução.</p>
+        </div>
+      </div>
+      <div class="dor-photo">
+        <img src="img/0JV_2350.webp" alt="Aluna treinando no leg press com acompanhamento do treinador" loading="lazy" width="800" height="1100">
+      </div>
+    </div>
+    <div class="dor-turn">
+      <p>O problema não é falta de força de vontade. É treinar <em>sem método, sem ciência</em> e sem ninguém olhando de perto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. METODOLOGIA ============ -->
+<section class="met">
+  <span class="ghost" style="bottom:-20px;left:-60px">MÉTODO</span>
+  <div class="wrap">
+    <span class="sec-label">Nossa metodologia</span>
+    <h2 class="sec-title">Neurociência + fitness: ciência aplicada no <em>seu resultado.</em></h2>
+    <p class="sec-sub">A Mônica une o conhecimento de neurociência ao treinamento físico: constância não é dom, é comportamento treinável. Por isso o plano respeita seu ritmo, sua rotina e seus limites, e evolui junto com você.</p>
+
+    <div class="met-steps">
+      <div class="step">
+        <h3>Você chama no WhatsApp</h3>
+        <p>Conta seu objetivo e sua rotina em 2 minutos. Sem formulário gigante, sem enrolação.</p>
+      </div>
+      <div class="step">
+        <h3>Avaliação completa</h3>
+        <p>Analisamos seu corpo, histórico, lesões e estilo de vida pra entender de onde você parte.</p>
+      </div>
+      <div class="step">
+        <h3>Plano sob medida</h3>
+        <p>Treino estratégico, testado, ajustado e acompanhado de perto, evoluindo de forma constante.</p>
+      </div>
+    </div>
+
+    <div class="met-benefits">
+      <div class="ben">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6L12 2z" fill="#CCFF00"/></svg>
+        <div><h4>Treinos estratégicos e otimizados</h4><p>Estratégia no lugar de volume: você sai de cada treino com a sensação de tempo bem usado.</p></div>
+      </div>
+      <div class="ben">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6L12 2z" fill="#CCFF00"/></svg>
+        <div><h4>Acompanhamento de perto</h4><p>Mônica + equipe completa de treinadores corrigindo técnica e garantindo segurança em cada série.</p></div>
+      </div>
+      <div class="ben">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6L12 2z" fill="#CCFF00"/></svg>
+        <div><h4>Pra qualquer objetivo real</h4><p>Emagrecimento, hipertrofia, condicionamento ou reabilitação pós-cirúrgica e pós-lesão.</p></div>
+      </div>
+      <div class="ben">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6L12 2z" fill="#CCFF00"/></svg>
+        <div><h4>Ambiente reservado</h4><p>Studio exclusivo em Palmas: nada de fila em aparelho nem treino no meio da multidão.</p></div>
+      </div>
+    </div>
+
+    <div class="photo-marquee" aria-label="Fotos do Studio Mônica Cury">
+      <div class="photo-track" id="photoTrack">
+        <img src="img/0JV_2252.webp" alt="Treinador corrigindo a execução do agachamento de uma aluna" loading="lazy">
+        <img src="img/0JV_1984.webp" alt="Acompanhamento individual durante exercício" loading="lazy">
+        <img src="img/0JV_1804.webp" alt="Aluna executando levantamento com orientação do treinador" loading="lazy">
+        <img src="img/0JV_1883.webp" alt="Treino de supino com acompanhamento de perto" loading="lazy">
+        <img src="img/0JV_1921.webp" alt="Treinador ajustando exercício de costas da aluna" loading="lazy">
+        <img src="img/0JV_1964.webp" alt="Treino funcional em dupla no studio" loading="lazy">
+        <img src="img/0JV_2020.webp" alt="Mônica Cury e equipe de treinadores" loading="lazy">
+        <img src="img/0JV_2064.webp" alt="Aluno executando agachamento no rack" loading="lazy">
+        <img src="img/0JV_2172.webp" alt="Correção de postura durante o exercício" loading="lazy">
+        <img src="img/0JV_2309.webp" alt="Treino de membros inferiores com orientação" loading="lazy">
+        <img src="img/0JV_2350.webp" alt="Aluna no leg press com acompanhamento" loading="lazy">
+        <img src="img/0JV_2372.webp" alt="Treino de pernas no studio" loading="lazy">
+      </div>
+    </div>
+
+    <div class="center">
+      <button class="cta-btn js-open">Quero treinar com método</button>
+      <span class="micro">Atendimento direto no WhatsApp • <b>Sem compromisso</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. PROVA SOCIAL ============ -->
+<section class="prova">
+  <span class="ghost" style="top:-26px;left:-30px">PROVA</span>
+  <div class="wrap">
+    <span class="sec-label">Resultados reais</span>
+    <h2 class="sec-title">Quem treina aqui <em>não volta</em> pro treino genérico.</h2>
+
+    <div class="prova-nums">
+      <div class="num"><b>+1000</b><span>alunos acompanhados</span></div>
+      <div class="num"><b>+15</b><span>anos de experiência</span></div>
+      <div class="num"><b>100%</b><span>treinos sob medida</span></div>
+    </div>
+
+    <div class="depo-grid">
+      <div class="depo">
+        <div class="stars">★★★★★</div>
+        <p>Depois de anos travada na academia, <b>perdi 9kg em 4 meses</b> treinando 3x por semana. A diferença é que aqui alguém olha pra mim de verdade.</p>
+        <div class="depo-who"><div class="avatar">AP</div><span>Ana Paula<small>Aluna há 8 meses</small></span></div>
+      </div>
+      <div class="depo">
+        <div class="stars">★★★★★</div>
+        <p>Voltei a treinar <b>3 meses depois de uma cirurgia no joelho</b>, com total segurança. A equipe ajustou cada exercício pro meu caso.</p>
+        <div class="depo-who"><div class="avatar">RM</div><span>Ricardo M.<small>Reabilitação pós-cirúrgica</small></span></div>
+      </div>
+      <div class="depo">
+        <div class="stars">★★★★★</div>
+        <p>Nunca consegui manter constância. Aqui <b>não falto há 6 meses</b>. O treino cabe na minha rotina e eu vejo evolução toda semana.</p>
+        <div class="depo-who"><div class="avatar">JC</div><span>Juliana C.<small>Hipertrofia</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. CTA FINAL ============ -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-card">
+      <h2>Seu resultado não vai aparecer <em>sozinho.</em></h2>
+      <p>Chama a gente no WhatsApp, conta seu objetivo e recebe uma avaliação sem compromisso. Em poucos minutos você sabe exatamente como seria o seu plano.</p>
+      <button class="cta-btn js-open">
+        <svg class="wa-ico" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.7s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.8 2c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.3 1.4z" fill="#000"/></svg>Falar com o Studio agora</button>
+      <span class="micro">Studio Mônica Cury • Palmas-TO • <b>Vagas limitadas por turma</b></span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Studio Mônica Cury</b> • Palmas, Tocantins<br>Treino com método, constância e propósito. © <span id="yy"></span></p>
+</footer>
+
+<!-- STICKY CTA MOBILE -->
+<div class="sticky-cta" id="stickyCta">
+  <button class="cta-btn js-open">Agendar minha avaliação</button>
+</div>
+
+<!-- ============ POPUP LEAD ============ -->
+<div class="overlay" id="leadOverlay" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+  <div class="modal">
+    <button class="modal-close" id="leadClose" aria-label="Fechar">×</button>
+    <h3 id="leadTitle">Falta <em>um passo</em> pro seu treino sob medida.</h3>
+    <p>Preencha abaixo e você será redirecionada(o) direto pro nosso WhatsApp.</p>
+    <form id="leadForm" novalidate>
+      <div class="field" id="fName">
+        <label for="inName">Seu nome</label>
+        <input type="text" id="inName" name="nome" autocomplete="name" placeholder="Como você se chama?">
+        <small>Digite seu nome.</small>
+      </div>
+      <div class="field" id="fPhone">
+        <label for="inPhone">Seu WhatsApp</label>
+        <input type="tel" id="inPhone" name="whatsapp" autocomplete="tel" inputmode="numeric" placeholder="(63) 99999-9999">
+        <small>Digite um WhatsApp válido com DDD.</small>
+      </div>
+      <button type="submit" class="cta-btn" id="leadSubmit">Ir pro WhatsApp →</button>
+      <span class="micro">Resposta em poucos minutos • <b>Sem compromisso</b></span>
+    </form>
+  </div>
+</div>
+
+<script>
+/* ===================== CONFIG ===================== */
+var CONFIG = {
+  /* Número que recebe os leads (só dígitos, com 55 + DDD) */
+  WHATSAPP: '556399640375',
+  /* URL do webhook (Make, Zapier, Sheets...). Deixe '' pra pular o envio. */
+  WEBHOOK_URL: '',
+  /* Mensagem pré-preenchida — {nome} é substituído automaticamente */
+  MESSAGE: 'Olá! Me chamo {nome} e quero agendar minha avaliação no Studio Mônica Cury.'
+};
+/* ================================================== */
+
+document.getElementById('yy').textContent = new Date().getFullYear();
+
+/* ---- duplica fotos pro loop infinito do carrossel ---- */
+var track = document.getElementById('photoTrack');
+track.innerHTML += track.innerHTML;
+
+/* ---- popup ---- */
+var overlay = document.getElementById('leadOverlay');
+function openModal(){ overlay.classList.add('open'); document.body.style.overflow='hidden'; setTimeout(function(){document.getElementById('inName').focus();},380); }
+function closeModal(){ overlay.classList.remove('open'); document.body.style.overflow=''; }
+document.querySelectorAll('.js-open').forEach(function(b){ b.addEventListener('click', openModal); });
+document.getElementById('leadClose').addEventListener('click', closeModal);
+overlay.addEventListener('click', function(e){ if(e.target===overlay) closeModal(); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+
+/* ---- máscara de telefone BR ---- */
+var phone = document.getElementById('inPhone');
+phone.addEventListener('input', function(){
+  var d = this.value.replace(/\D/g,'').slice(0,11);
+  if(d.length>10) this.value = '('+d.slice(0,2)+') '+d.slice(2,7)+'-'+d.slice(7);
+  else if(d.length>6) this.value = '('+d.slice(0,2)+') '+d.slice(2,6)+'-'+d.slice(6);
+  else if(d.length>2) this.value = '('+d.slice(0,2)+') '+d.slice(2);
+  else if(d.length>0) this.value = '('+d;
+});
+
+/* ---- submit: webhook → whatsapp ---- */
+document.getElementById('leadForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var nameEl = document.getElementById('inName');
+  var name = nameEl.value.trim();
+  var digits = phone.value.replace(/\D/g,'');
+  var ok = true;
+
+  document.getElementById('fName').classList.toggle('show-err', name.length<2);
+  nameEl.classList.toggle('err', name.length<2);
+  if(name.length<2) ok=false;
+
+  var phoneOk = digits.length>=10 && digits.length<=11;
+  document.getElementById('fPhone').classList.toggle('show-err', !phoneOk);
+  phone.classList.toggle('err', !phoneOk);
+  if(!phoneOk) ok=false;
+  if(!ok) return;
+
+  var btn = document.getElementById('leadSubmit');
+  btn.textContent = 'Abrindo WhatsApp...';
+  btn.disabled = true;
+
+  /* evento Lead no Pixel da Meta */
+  if (typeof fbq === 'function') fbq('track', 'Lead');
+
+  var go = function(){
+    var msg = encodeURIComponent(CONFIG.MESSAGE.replace('{nome}', name));
+    window.location.href = 'https://wa.me/' + CONFIG.WHATSAPP + '?text=' + msg;
+  };
+
+  if(CONFIG.WEBHOOK_URL){
+    var payload = JSON.stringify({
+      nome: name,
+      whatsapp: '55'+digits,
+      origem: 'landing-studio-monica-cury',
+      data: new Date().toISOString()
+    });
+    /* envia e redireciona mesmo se o webhook falhar */
+    fetch(CONFIG.WEBHOOK_URL, {method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:payload})
+      .catch(function(){}).finally(go);
+    setTimeout(go, 2500); /* fallback de segurança */
+  } else {
+    go();
+  }
+});
+
+/* ---- sticky CTA mobile ---- */
+var sticky = document.getElementById('stickyCta');
+window.addEventListener('scroll', function(){
+  sticky.classList.toggle('show', window.scrollY > 500 && !overlay.classList.contains('open'));
+}, {passive:true});
+</script>
+</body>
+</html>
